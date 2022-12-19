@@ -3,9 +3,10 @@ class Solution:
         cnt=0
         if len(s)!=len(t):
             return False
-        for i in s:
-            if s.count(i)!=t.count(i):
-                return False
-        else:
-            return True
+        if len(s)==len(t):
+            for i in s:
+                if s.count(i)!=t.count(i):
+                    return False
+        
+        return True
         
