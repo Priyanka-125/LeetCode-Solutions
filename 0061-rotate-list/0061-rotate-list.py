@@ -11,12 +11,10 @@ class Solution:
         while temp.next:
             temp=temp.next
             l=l+1
-        temp.next=head
+        temp.next=head                   #temp last 5 connect to 1 i.e head
         curr=head
         for x in range( l- (k%l)-1 ):
             curr = curr.next
-        newhead=curr.next
-        curr.next=None
+        newhead=curr.next                #new pointer points to 4
+        curr.next=None                   #breaking link between 3 & 4
         return newhead
-        
-        
