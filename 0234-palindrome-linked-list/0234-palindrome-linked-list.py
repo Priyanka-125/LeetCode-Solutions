@@ -6,14 +6,13 @@
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         temp = head
-        stack = []
-        while temp != None:
-            stack.append(temp.val)
-            temp = temp.next
-        temp  = head 
-        while len(stack) != 0:
-            if temp.val != stack.pop():
-                return False
-            temp = temp.next
-        return True
+        l1 = []
+        l2=[]
+        while temp:
+            l1.append(temp.val)
+            l2.append(temp.val)
+            temp=temp.next
+        if l1==l2[::-1]:
+            return True
+        return False
         
