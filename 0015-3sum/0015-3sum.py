@@ -18,6 +18,6 @@ class Solution:
                     left += 1 
                 else:
                     right -= 1
-        res = list(set(tuple(sub) for sub in trip))
+        res = list(set(tuple(sorted(sub)) for sub in trip))
         return res
         
