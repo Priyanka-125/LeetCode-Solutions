@@ -19,6 +19,13 @@ class Solution:
             return p
         else:
             return "-1"
+            
+            '''
+            if l:
+          return "".join(sorted(set(l)))
+        else:
+          return -1
+          '''
         
 
 #{ 
