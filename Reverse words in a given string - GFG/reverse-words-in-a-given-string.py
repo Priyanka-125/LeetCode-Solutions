@@ -10,6 +10,10 @@ class Solution:
         for i in S:
             str=str+i+"."
         return str[:-1]
+        
+        '''
+        return '.'.join(reversed(S.split('.')))
+        '''
 
 
 #{ 
