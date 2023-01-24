@@ -28,7 +28,52 @@ class Solution:
             return True
         else:
             return False
+'''
+#Function to check whether the list is palindrome.
 
+def getMid(head):
+    fast=head.next
+    slow = head
+    while(fast!=None and fast.next!=None):
+        fast=fast.next.next
+        slow = slow.next
+        
+     
+    return slow
+
+def reverse(head):
+    prev=nex=None
+    cur=head
+    while(cur!=None):
+        nex=cur.next
+        cur.next=prev
+        prev=cur
+        cur=nex
+    
+    return prev
+        
+class Solution:
+    def isPalindrome(self, head):
+        #code here
+        if(head.next==None):
+            return 1
+        
+        # step 1: get mid
+        mid = getMid(head)
+        # step2 reverse the 2nd half
+        temp=mid.next
+        mid.next = reverse(temp)
+        
+        h1 = head
+        h2 = mid.next
+        while(h2!=None):
+            if(h1.data!=h2.data):
+                return 0
+            h1=h1.next
+            h2=h2.next
+
+        return 1
+'''
 
 #{ 
  # Driver Code Starts
