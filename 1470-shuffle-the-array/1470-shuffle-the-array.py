@@ -11,3 +11,10 @@ class Solution:
             p.append(l[i])
             p.append(k[i])
         return p
+    '''
+    ls=[]
+        for i in range(n):
+            ls+=[nums[i]]
+            ls+=[nums[i+n]]
+        return ls
+    '''
